@@ -1,0 +1,61 @@
+.registration-content {
+  --padding-bottom: 20px;
+  background: #fff;
+
+  ion-list {
+    ion-item {
+      --border-color: #ccc;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+
+      ion-label {
+        font-weight: 500;
+      }
+
+      ion-input,
+      ion-select,
+      ion-datetime {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .address-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  ion-button {
+    margin-top: 14px;
+    border-radius: 8px;
+  }
+
+  ion-thumbnail {
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 auto 12px;
+    border-radius: 10px;
+    border: 2px solid var(--ion-color-primary);
+    display: block;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .link {
+    color: var(--ion-color-primary);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

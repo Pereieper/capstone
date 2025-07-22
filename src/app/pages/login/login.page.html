@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <div class="login-container">
+    <h1>Login</h1>
+
+    <ion-input
+      class="custom-input"
+      fill="outline"
+      label="Phone Number"
+      label-placement="floating"
+      type="tel"
+      [(ngModel)]="phone"
+      name="phone"
+      required>
+    </ion-input>
+
+    <ion-input
+      class="custom-input"
+      fill="outline"
+      label="Password"
+      label-placement="floating"
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      required>
+    </ion-input>
+
+    <div class="checkbox-forgot-row">
+      <ion-item lines="none" class="checkbox-row">
+        <ion-checkbox
+          slot="start"
+          [(ngModel)]="rememberMe"
+          name="rememberMe"
+          class="custom-checkbox">
+        </ion-checkbox>
+        <ion-label class="checkbox-label">Remember Me</ion-label>
+      </ion-item>
+
+      <a class="forgot-password" (click)="goToForgotPassword()">Forgot Password?</a>
+    </div>
+
+    <ion-button expand="block" class="login-button" (click)="login()">
+      Login
+    </ion-button>
+  </div>
+
+  <div class="bottom-text">
+    <span>New User?
+      <a (click)="goToRegister()" class="create-link">Create Account</a>
+    </span>
+  </div>
+</ion-content>
